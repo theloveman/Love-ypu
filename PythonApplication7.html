@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رسالة حب</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffe0f0;
+            text-align: center;
+            padding: 50px;
+        }
+
+        #loveButton {
+            background-color: #ff91a4;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        #loveMessage {
+            color: #ff91a4;
+            font-size: 24px;
+            margin-top: 20px;
+        }
+
+        .flowers {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('flowers.png'); /* استبدل هذا بمسار صورة الورود الخاصة بك */
+            background-size: cover;
+            z-index: -1;
+        }
+
+        @media (max-width: 600px) {
+            #loveMessage {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="loveMessage">
+        إلى نور عيني<br>
+        في كل يوم يمر أجد نفسي أغرق أكثر فأكثر في بحر حبك<br>
+        أنت النغمة التي تعزف سيمفونية قلبي واللون الذي يرسم أيامي بألوان الفرح<br>
+        كل لحظة بدونك تمر كالدهر وكل ثانية بجانبك تساوي عمرا<br>
+        أمتن لك على كل اللحظات الضحكات والذكريات التي نسجناها معا<br>
+        أحبك أكثر مما يمكن أن تتخيلي وأتطلع لقضاء العمر كله معك<br>
+        اي رايك في الحته الفصحي دي ؟ <br>
+        [Oussama to Nonty]
+    </div>
+    <button id="loveButton">خديلك وردة</button>
+    <div class="flowers"></div>
+
+    <script>
+        document.getElementById('loveButton').onclick = function () {
+            var button = document.getElementById('loveButton');
+            var messageDiv = document.getElementById('loveMessage');
+            var flowersDiv = document.getElementsByClassName('flowers')[0];
+            messageDiv.style.display = 'none';
+            flowersDiv.style.display = 'block';
+            button.style.display = 'none'; // هذا السطر يخفي الزر
+        };
+    </script>
+
+</body>
+</html>
