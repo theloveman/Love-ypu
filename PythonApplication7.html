@@ -39,7 +39,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('flowers.png'); /* استبدل هذا بمسار صورة الورود الخاصة بك */
+            background-image: url('flowers.png'); 
             background-size: cover;
             z-index: -1;
         }
@@ -66,14 +66,21 @@
     <button id="loveButton">خديلك وردة</button>
     <div class="flowers"></div>
 
+   
+    <audio id="loveSound" src="path_to_your_sound.mp3" preload="auto"></audio>
+
     <script>
         document.getElementById('loveButton').onclick = function () {
             var button = document.getElementById('loveButton');
             var messageDiv = document.getElementById('loveMessage');
             var flowersDiv = document.getElementsByClassName('flowers')[0];
+            var sound = document.getElementById('loveSound');
+
             messageDiv.style.display = 'none';
             flowersDiv.style.display = 'block';
-            button.style.display = 'none'; // هذا السطر يخفي الزر
+            button.style.display = 'none'; 
+
+            sound.play(); 
         };
     </script>
 
